@@ -3,6 +3,7 @@ package com.sda.javagda21.gotgame.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class Map {
 
@@ -49,7 +50,6 @@ public class Map {
             surroundingFieldsList.add(leftField);
         }
 
-
         return surroundingFieldsList;
     }
 
@@ -57,10 +57,12 @@ public class Map {
         Integer size = MAX_SIZE;
         Field field[][] = new Field[MAX_SIZE][MAX_SIZE];
         Map map = new Map(field);
+        Random random = new Random();
 
         for (int i = 0; i < MAX_SIZE; i++) {
             for (int j = 0; j < MAX_SIZE; j++) {
-                Field newField = new Field(i * MAX_SIZE + j, null);
+                Integer warriorNo = random.nextInt(20)+30;
+                Field newField = new Field(i * MAX_SIZE + j, null, warriorNo);
                 field[i][j] = newField;
                 System.out.println(newField);
             }

@@ -4,14 +4,23 @@ public class Field {
 
     private Integer fieldNo;
     private Player owner;
+    private Integer warriorNo;
 
+    public Field(Integer fieldNo, Player owner, Integer warriorNo) {
+        this.fieldNo = fieldNo;
+        this.owner = owner;
+        this.warriorNo = warriorNo;
+    }
 
     public Field() {
     }
 
-    public Field(Integer fieldNo, Player owner) {
-        this.fieldNo = fieldNo;
-        this.owner = owner;
+    public Integer getWarriorNo() {
+        return warriorNo;
+    }
+
+    public void setWarriorNo(Integer warriorNo) {
+        this.warriorNo = warriorNo;
     }
 
     public Integer getFieldNo() {
@@ -35,6 +44,7 @@ public class Field {
         return "Field{" +
                 "fieldNo=" + fieldNo +
                 ", owner=" + owner +
+                ", warriorNo=" + warriorNo +
                 '}';
     }
 }
