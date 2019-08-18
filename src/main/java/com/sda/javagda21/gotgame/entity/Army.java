@@ -1,9 +1,18 @@
-package com.sda.javagda21.gotgame.model;
+package com.sda.javagda21.gotgame.entity;
 
 
-import java.util.Random;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Army {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private int size;
 
     public Army(int size) {
@@ -17,9 +26,6 @@ public class Army {
     public void setSize(int size) {
         this.size = size;
     }
-
-
-
 
     @Override
     public String toString() {
