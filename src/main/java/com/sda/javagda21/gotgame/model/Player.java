@@ -9,6 +9,7 @@ public class Player {
 
     private String name;
 
+
     @OneToMany
     private Gold gold;
 }
