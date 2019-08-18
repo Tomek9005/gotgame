@@ -1,5 +1,6 @@
 package com.sda.javagda21.gotgame;
 
+import com.sda.javagda21.gotgame.model.Map;
 import com.sda.javagda21.gotgame.service.ArmyService;
 import com.sda.javagda21.gotgame.entity.Army;
 
@@ -13,5 +14,10 @@ public class main {
 
         ArmyService armyService = new ArmyService();
         System.out.println(armyService.fight(armyMoja, armyTwoja));
+
+        Map map = Map.createNewMap();
+        System.out.println("------------------");
+        System.out.println(map.surroundingFields(10));
+
     }
 }
