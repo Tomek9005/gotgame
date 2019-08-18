@@ -10,21 +10,22 @@ public class Army {
         this.size = size;
     }
 
-    public int dealDmg (int size) {
-        Random random = new Random();
-        int damage = 0;
-
-        for (int i = 0; i < size; i++) {
-            damage = damage + random.nextInt(3);
-        }
-
-        return damage;
-
+    public int getSize() {
+        return size;
     }
 
-    public int takeDmg (int dmg, int size){
-        int kills = dmg/3;
-        return size - kills;
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+
+
+
+    @Override
+    public String toString() {
+        return "Army{" +
+                "size=" + size +
+                '}';
     }
 }
 
