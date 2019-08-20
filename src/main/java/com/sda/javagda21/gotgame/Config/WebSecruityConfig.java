@@ -6,7 +6,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
 
-@Route("A1")
+@Route("AAA")
 public class WebSecruityConfig extends VerticalLayout {{
 
     TextField textField = new TextField("przedstaw się ");
